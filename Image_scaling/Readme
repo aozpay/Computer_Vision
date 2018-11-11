@@ -1,1 +1,12 @@
 
+Nearest neighbor interpolation
+
+En yakın komşuluk algoritmasına göre ölçeklendirme işlemini şöyle hayal edebiliriz.
+Örneğin elimizde 500x500 fotoğraf var ve biz bunu 800*800 olmasını istiyoruz.
+Fotoğrafı 500x500'den 800*800'e düz bir şekilde çıkarırsak kenarlardaki 300x300 lık kısım boş kalmış olacaktır.
+Bunun için örneğin 800x800 üncü kare acaba 500x500'üncü karede nereye denk gelir diye bakarsak fotoğrafın büyümüş halinde 800x800'üncü
+pikselde hangi renk değeri olması gerekir tahmin etmiş oluruz.
+Bunun için 500/800 oranı bizim renk tahmini için yeterli olup her satır ve sutün değerlerini bu sayıyla çarpıp istediğimiz piksel
+değerinde hangi değer olacak bulmuş oluruz.
+
+Bu algoritma bir tahmin algoritması olup çoğu problemlerde kullanılabilir.
