@@ -2,4 +2,5 @@
 Görüntü işleme ve bilgisayarlı görme ile ilgili MATLAB de yazılmış kodları içerir.
 
 ÖRNEKLER
-1-> Image Scaling
+1-> Filters
+
