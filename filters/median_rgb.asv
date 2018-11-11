@@ -1,0 +1,39 @@
+clear all
+
+%RGB fotografi oku
+I = imread('colorapp_pep.png');
+%Tuz-biber gürültüsü ekle.
+A = imnoise(I,'Salt & pepper',0.1);
+figure,imshow(A);title('Tuz-biber gurultusu eklenmis fotograf');
+
+%Cekirdek matris boyutlari
+M=3;
+N=3;
+
+%Kenar bosluklar?na 1,1 ekleme yap.
+modifyA=padarray(A,[floor(M/2),floor(N/2)]);
+%Fotografin sat?r ve sütun boyutunda sifir matrisi olustur.
+B = zeros([size(A,1) size(A,2)]);
+%Sat
+for i = 1:size(modifyA,1)-(M-1)
+    for j = 1:size(modifyA,2)-(N-1)
+       
+       
+        temp = modifyA(i:i+(M-1),j:j+(N-1),:);
+        %RED,GREEN AND BLUE CHANNELS ARE TRAVERSED SEPARATELY
+        for k = 1:3
+
+          tmp = temp(:,:,k);
+          B(i,j,k) = median(tmp(:));
+
+        end
+      
+       
+    end
+end
+
+
+%CONVERT THE IMAGE TO UINT8 FORMAT.
+B = uint8(B);
+figure,imshow(B);
+title('IMAGE AFTER MEDIAN FILTERING');
