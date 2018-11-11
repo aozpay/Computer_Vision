@@ -8,3 +8,22 @@ Daha sonra bu matris içinde kalan sayılar toplanır.
 Ortanca değeri alınır ve çekirdek matrisinin ortasına yerleştirilir.
 Bunu 500x500 için yapacağımızı düşünürsek 0,0 ve 3,3 koordinatlarının arasında kalan kare bölgeden sağa doğru en son sütuna kadar gidilir.
 Daha sonra alt satıra inilir.
+
+Mean Filtresi
+
+Mean filtresinde öncelikle her zaman ki gibi çekirdek matris oluştururuz.Örneğimizde 3x3 lık bir matris olusturdum.
+Çekirdek matrisimizin bütün elemanları 1'dir.
+Daha sonra bu elemanları toplar ve matris boyutumuza böleriz.Sonuç 1/9 cıkmaktadır.
+Bu çekirdek matrisini asıl matrisimin hangi bölgesine filtre uygulamak istersek oraya yerleştiririz.
+Örneğin koydugumuz bölgenin elemanları [ 1 2 3
+                                         4 5 6
+                                         7 8 9]
+olsun.
+Biz elemanları 1 olan matris koymuştuk.Elemanlarının tek tek çekirdek matrisi ile çarpıldığını düşünürsek aynı matrisi elde etmiş oluruz.
+Mean filtresinin mantığı elemanları toplayıp eleman sayısına bölmek olduğundan,matrisin elemanlarını toplayıp 9'a bölmek ile 
+her elemanınn değerini 1/9 ile çarpmak aynı şeydir.
+Çarpım gerçekleştikten sonra tüm elemanlar toplanır ve ortalama değer elde edilmiş olur.
+Bu orta değeride matrisin orta kısmına koyarız ve filtreleme işlemi bitmiş olur.
+3 boyutta filtreleme gerçekleştirmek istersek,
+Matrisimizi 3 boyutlu olarak hayal etmek lazım.1.boyut 'R' , 2.boyut 'G' , 3.boyut 'B' boyutudur ve her boyut için filtreleme 
+yapmak gerekir.
