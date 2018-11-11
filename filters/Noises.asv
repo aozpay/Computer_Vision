@@ -1,0 +1,7 @@
+Img = imread('pep.png');
+
+A = imnoise(Img,'Gaussian',0.04,0.002);
+B = imnoise(Img,'Salt & pepper',0.1);
+imshow(A);
+hold onn.
+imshow(B);
