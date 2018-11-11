@@ -1,2 +1,10 @@
 
 Median Filtresi
+
+Median filtresinde öncelikli olarak çekirdek matrisin boyutları belirlenir.
+Daha sonra fotoğrafta bu belirlenen çekirdek matris ( örneğin 3x3 ) nerede filtreleme işlemi yapılacaksa oraya konulur.
+Örneğin bizim elimizde 500x500 lük fotoğraf olsun.İlk olarak 0,0 ve 3,3 koordinatlarının arasında kalan kısıma çekirdek matrisimizi koyalım.
+Daha sonra bu matris içinde kalan sayılar toplanır.
+Ortanca değeri alınır ve çekirdek matrisinin ortasına yerleştirilir.
+Bunu 500x500 için yapacağımızı düşünürsek 0,0 ve 3,3 koordinatlarının arasında kalan kare bölgeden sağa doğru en son sütuna kadar gidilir.
+Daha sonra alt satıra inilir.
